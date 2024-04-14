@@ -1,5 +1,7 @@
 function createHome() {
     const content = document.querySelector('#content');
+    const mainContainer = document.createElement('div');
+    mainContainer.id = 'mainContainer';
 
     const food = document.createElement('img');
     food.src = '../src/imgs/mapotofu.jpg';
@@ -11,10 +13,10 @@ function createHome() {
     const description = document.createElement('p');
     description.textContent = 'The very best Chinese food in the GTA!';
 
-    content.appendChild(tagline);
-    content.appendChild(food);
-    content.appendChild(description);
-
+    mainContainer.appendChild(tagline);
+    mainContainer.appendChild(food);
+    mainContainer.appendChild(description);
+    content.appendChild(mainContainer);
 }
 
 export default createHome;

@@ -12,21 +12,39 @@ function clearContent() {
     mainContent.textContent = '';
 };
 
-homeBtn.addEventListener('click', ()=> {
-    console.log('hello home');
+function setActiveTab(button) {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+        if (button !== this) {
+          button.classList.remove("active");
+        }
+    });
+    button.classList.add("active");
+}
+
+homeBtn.addEventListener('click', (e)=> {
     clearContent();
     createHome();
+    setActiveTab(e.target);
 });
 
-menuBtn.addEventListener('click', ()=> {
+menuBtn.addEventListener('click', (e)=> {
     clearContent();
     createMenu();
+    setActiveTab(e.target);
 })
 
-aboutBtn.addEventListener('click', ()=> {
-    console.log('hello about');
+aboutBtn.addEventListener('click', (e)=> {
     clearContent();
     createAbout();
+    setActiveTab(e.target);
 })
 
+const header = document.querySelector('header');
+const restaurantName = document.createElement('div');
+restaurantName.id = 'restaurantName';
+restaurantName.textContent = "THE TASTY WOK";
+header.appendChild(restaurantName);
+
 createHome();
+setActiveTab(homeBtn);

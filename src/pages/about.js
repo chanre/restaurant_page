@@ -1,13 +1,21 @@
 function createAbout() {
     const content = document.querySelector('#content');
+    const mainContainer = document.createElement('div');
+    mainContainer.id = 'mainContainer';
 
     const phoneNumber = document.createElement('p');
-    phoneNumber.textContent = '123-456-7890';
+    phoneNumber.textContent = '\u{260E} 123-456-7890';
     const location = document.createElement('p');
-    location.textContent = '123 Fake Street, Fake City, FS, FC';
+    location.textContent = '\u{1F3E1} 123 Fake Street, Fake City, FS, FC';
+    const maps = document.createElement('img');
+    maps.classList.add('location');
+    maps.src = '../src/imgs/location.png';
+    maps.alt = 'Restaurant Location';
 
-    content.appendChild(phoneNumber);
-    content.appendChild(location);
+    mainContainer.appendChild(phoneNumber);
+    mainContainer.appendChild(location);
+    mainContainer.appendChild(maps);
+    content.appendChild(mainContainer);
 }
 
 export default createAbout;
