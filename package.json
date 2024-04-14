@@ -4,7 +4,8 @@
   "description": "Single page webapp using HTML, CSS, JS and webpack to display a restaurant webpage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "distpush": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
