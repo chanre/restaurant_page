@@ -1,6 +1,5 @@
-const createHome = (function () {
+function createHome() {
     const content = document.querySelector('#content');
-    content.classList.add('home');
 
     const food = document.createElement('img');
     food.src = '../src/imgs/mapotofu.jpg';
@@ -16,6 +15,6 @@ const createHome = (function () {
     content.appendChild(food);
     content.appendChild(description);
 
-})();   
+}
 
 export default createHome;
