@@ -1,4 +1,4 @@
-import food from '../imgs/mapoTofu.jpg';
+import foodImg from '../imgs/mapotofu.jpg';
 
 function createHome() {
     const content = document.querySelector('#content');
@@ -6,7 +6,7 @@ function createHome() {
     mainContainer.id = 'mainContainer';
 
     const food = document.createElement('img');
-    food.src = food;
+    food.src = foodImg;
     food.alt = 'Mapo Tofu';
 
     const tagline = document.createElement('h1');

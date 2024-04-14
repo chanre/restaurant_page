@@ -1,4 +1,4 @@
-import location from '../imgs/location.png';
+import locationImg from '../imgs/location.png';
 
 function createAbout() {
     const content = document.querySelector('#content');
@@ -11,7 +11,7 @@ function createAbout() {
     location.textContent = '\u{1F3E1} 123 Fake Street, Fake City, FS, FC';
     const maps = document.createElement('img');
     maps.classList.add('location');
-    maps.src = location;
+    maps.src = locationImg;
     maps.alt = 'Restaurant Location';
 
     mainContainer.appendChild(phoneNumber);
