@@ -9,7 +9,7 @@ function createAbout() {
     phoneNumber.textContent = '\u{260E} 123-456-7890';
     const location = document.createElement('p');
     location.textContent = '\u{1F3E1} 123 Fake Street, Fake City, FS, FC';
-    const maps = document.createElement('img');
+    const maps = new Image();
     maps.classList.add('location');
     maps.src = locationImg;
     maps.alt = 'Restaurant Location';

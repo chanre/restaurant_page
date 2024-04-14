@@ -5,7 +5,7 @@ function createHome() {
     const mainContainer = document.createElement('div');
     mainContainer.id = 'mainContainer';
 
-    const food = document.createElement('img');
+    const food = new Image();
     food.src = foodImg;
     food.alt = 'Mapo Tofu';
 
